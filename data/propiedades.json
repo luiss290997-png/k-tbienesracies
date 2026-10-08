@@ -29,7 +29,7 @@
       "direccion": "Privada en Cumbres, Saltillo, Coahuila",
       "banos": 2.5,
       "tipo": "casa",
-      "publicada": true,
+      "publicada": false,
       "operacion": "venta",
       "titulo": "Casa en privada, Cumbres",
       "destacada": false,

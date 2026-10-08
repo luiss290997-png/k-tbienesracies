@@ -123,3 +123,40 @@ footer.site .muted { color: rgba(255,252,247,.65); font-size: 14px; line-height:
 @media (min-width: 1024px) {
   .hero, .hero .copy { min-height: 700px; }
 }
+
+/* Propiedades */
+.prop-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+@media (min-width: 700px) { .prop-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .prop-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.prop-card {
+  border: 1px solid var(--line); background: var(--paper); border-radius: 10px; overflow: hidden;
+  display: flex; flex-direction: column; transition: box-shadow .25s ease, transform .25s ease;
+}
+.prop-card:hover { box-shadow: 0 14px 34px rgba(11,31,26,.12); transform: translateY(-2px); }
+.prop-card-img { position: relative; display: block; width: 100%; aspect-ratio: 4/3; border: 0; padding: 0; background: var(--stone); cursor: pointer; }
+.prop-card-img img { width: 100%; height: 100%; object-fit: cover; }
+.prop-tag {
+  position: absolute; left: .75rem; top: .75rem; background: rgba(11,31,26,.82); color: var(--paper);
+  font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: .35rem .6rem; border-radius: 999px;
+}
+.prop-tag-inline {
+  display: inline-block; background: var(--green); color: var(--paper); font-size: 11px; letter-spacing: .08em;
+  text-transform: uppercase; padding: .3rem .6rem; border-radius: 999px; margin: 0 0 .5rem;
+}
+.prop-card-body { padding: 1.25rem; display: flex; flex-direction: column; gap: .3rem; flex: 1; }
+.prop-price { font-family: var(--display); font-size: 1.4rem; color: var(--ink-text); margin: 0; }
+.prop-card-body h3 { margin: 0; font-size: 1.05rem; }
+.prop-zona { color: var(--green-2); font-size: 13px; margin: 0; }
+.prop-meta { color: var(--muted); font-size: 13px; margin: 0 0 .5rem; }
+.prop-card-body .btn { margin-top: auto; align-self: flex-start; }
+
+.prop-modal-box { max-width: 720px; padding: 0; }
+.prop-gallery-main { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.prop-thumbs { display: flex; gap: .5rem; padding: .75rem; overflow-x: auto; }
+.prop-thumbs button { border: 0; padding: 0; width: 64px; height: 48px; border-radius: 6px; overflow: hidden; opacity: .6; flex: none; background: none; }
+.prop-thumbs button.on { opacity: 1; box-shadow: 0 0 0 2px var(--green); }
+.prop-thumbs img { width: 100%; height: 100%; object-fit: cover; }
+.prop-modal-info { padding: 1.5rem; }
+.prop-modal-info h2 { margin: .2rem 0; }
+.prop-modal-close { position: absolute; top: .75rem; right: .75rem; background: rgba(11,31,26,.6); font-size: 1.1rem; line-height: 1; z-index: 2; }

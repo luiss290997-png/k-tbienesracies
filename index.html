@@ -73,7 +73,7 @@ Asesoría profesional y personalizada.</p>
     <select name="operacion"><option value="todas">Venta / Renta</option><option value="venta">Venta</option><option value="renta">Renta</option></select>
   </div>
   <div class="cell"><label>Zona</label>
-    <select name="zona"><option value="todas">Todas las zonas</option><option>Cumbres</option><option>Campestre La Rosita</option><option>Saltillo 2000</option><option>Residencial San Alberto</option><option>Los Valdez</option></select>
+    <select name="zona"><option value="todas">Todas las zonas</option><option>Cumbres</option><option>Campestre La Rosita</option><option>Saltillo 2000</option><option>Residencial San Alberto</option><option>Los Valdez</option><option>Las Misiones</option><option>Centro</option><option>Carranza</option><option>Zona Elena</option></select>
   </div>
   <div class="cell"><label>Precio</label>
     <select name="precio"><option value="">Sin límite</option><option value="2000000">Hasta $2,000,000</option><option value="4000000">Hasta $4,000,000</option><option value="8000000">Hasta $8,000,000</option></select>
@@ -84,8 +84,9 @@ Asesoría profesional y personalizada.</p>
 <section class="section">
   <div class="wrap">
     <p class="eyebrow">Propiedades</p>
-    <h2>Inventario en actualización</h2>
-    <div class="notice" style="margin-top:2rem">
+    <h2>Propiedades destacadas</h2>
+    <div class="prop-grid" id="prop-destacadas" style="margin-top:2rem"></div>
+    <div class="notice" id="prop-destacadas-empty" style="margin-top:2rem">
       <p class="eyebrow">Inventario</p>
       <h3>Estamos actualizando el inventario</h3>
       <p style="color:var(--muted);max-width:32rem">Estamos revisando el stock real de casas, departamentos, terrenos y locales en Saltillo. Deja tu búsqueda o agenda una cita.</p>
@@ -94,6 +95,7 @@ Asesoría profesional y personalizada.</p>
         <a class="btn btn-ink" href="/contacto/">Escribir</a>
       </p>
     </div>
+    <p style="margin-top:2rem"><a class="btn btn-ink" href="/propiedades/">Ver todo el inventario</a></p>
   </div>
 </section>
 <section class="ink section">
@@ -194,4 +196,18 @@ Asesoría profesional y personalizada.</p>
   </div>
 </div>
 <script src="/js/site.js"></script>
+<script src="/js/propiedades.js"></script>
+<!-- Permite que los enlaces de invitación del panel /admin inicien sesión correctamente -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body></html>

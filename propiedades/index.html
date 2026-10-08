@@ -51,7 +51,7 @@
   </div>
 </header>
 
-<section class="banner"><img src="/images/casa-campestre.jpg" alt=""><div class="shade"></div><div class="wrap inner"><p class="eyebrow">Inventario</p><h1>Estamos actualizando el inventario</h1></div></section>
+<section class="banner"><img src="/images/casa-campestre.jpg" alt=""><div class="shade"></div><div class="wrap inner"><p class="eyebrow">Inventario</p><h1>Propiedades disponibles en Saltillo</h1></div></section>
 <section class="section"><div class="wrap">
 <form class="search" data-filter>
   <div class="cell"><label>Tipo</label>
@@ -61,14 +61,15 @@
     <select name="operacion"><option value="todas">Venta / Renta</option><option value="venta">Venta</option><option value="renta">Renta</option></select>
   </div>
   <div class="cell"><label>Zona</label>
-    <select name="zona"><option value="todas">Todas las zonas</option><option>Cumbres</option><option>Campestre La Rosita</option><option>Saltillo 2000</option><option>Residencial San Alberto</option><option>Los Valdez</option></select>
+    <select name="zona"><option value="todas">Todas las zonas</option><option>Cumbres</option><option>Campestre La Rosita</option><option>Saltillo 2000</option><option>Residencial San Alberto</option><option>Los Valdez</option><option>Las Misiones</option><option>Centro</option><option>Carranza</option><option>Zona Elena</option></select>
   </div>
   <div class="cell"><label>Precio</label>
     <select name="precio"><option value="">Sin límite</option><option value="2000000">Hasta $2,000,000</option><option value="4000000">Hasta $4,000,000</option><option value="8000000">Hasta $8,000,000</option></select>
   </div>
   <button class="btn btn-green" type="submit">Buscar</button>
 </form>
-<div class="notice" style="margin-top:2rem"><h3>Estamos actualizando el inventario</h3><p style="color:var(--muted)">Usa el buscador o agenda una cita. Te avisamos cuando coincida una propiedad.</p><button class="btn btn-green" type="button" data-open-cita style="margin-top:1rem">Agendar cita</button></div></div></section>
+<div class="prop-grid" id="prop-grid" style="margin-top:2.5rem"></div>
+<div class="notice" id="prop-empty" style="margin-top:2.5rem"><h3>No encontramos propiedades con esos filtros</h3><p style="color:var(--muted)">Prueba cambiando la búsqueda o agenda una cita y te avisamos cuando tengamos algo para ti.</p><button class="btn btn-green" type="button" data-open-cita style="margin-top:1rem">Agendar cita</button></div></div></section>
 
 <footer class="site">
   <div class="wrap grid">
@@ -124,4 +125,5 @@
   </div>
 </div>
 <script src="/js/site.js"></script>
+<script src="/js/propiedades.js"></script>
 </body></html>

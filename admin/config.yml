@@ -1,0 +1,102 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: "es"
+
+media_folder: "images/propiedades"
+public_folder: "/images/propiedades"
+
+collections:
+  - name: "propiedades"
+    label: "Propiedades"
+    label_singular: "Propiedad"
+    description: "Agrega, edita, oculta o quita propiedades del sitio. Los cambios tardan uno o dos minutos en aparecer publicados."
+    files:
+      - name: "listado"
+        label: "Listado de propiedades"
+        file: "data/propiedades.json"
+        fields:
+          - label: "Propiedades"
+            name: "propiedades"
+            widget: "list"
+            summary: "{{fields.titulo}} — {{fields.zona}} ({{fields.publicada}})"
+            fields:
+              - label: "Título"
+                name: "titulo"
+                widget: "string"
+                hint: "Ej. Casa en Cumbres"
+              - label: "Tipo"
+                name: "tipo"
+                widget: "select"
+                options:
+                  - { label: "Casa", value: "casa" }
+                  - { label: "Departamento", value: "departamento" }
+                  - { label: "Terreno", value: "terreno" }
+                  - { label: "Local comercial", value: "local" }
+              - label: "Operación"
+                name: "operacion"
+                widget: "select"
+                options:
+                  - { label: "Venta", value: "venta" }
+                  - { label: "Renta", value: "renta" }
+              - label: "Zona"
+                name: "zona"
+                widget: "select"
+                options:
+                  - "Cumbres"
+                  - "Campestre La Rosita"
+                  - "Saltillo 2000"
+                  - "Residencial San Alberto"
+                  - "Los Valdez"
+                  - "Las Misiones"
+                  - "Centro"
+                  - "Carranza"
+                  - "Zona Elena"
+                hint: "Si necesitas una zona que no está en la lista, pide que la agreguen aquí y en el buscador del sitio."
+              - label: "Precio"
+                name: "precio"
+                widget: "number"
+                value_type: "float"
+                hint: "En pesos mexicanos. Si es renta, pon el precio mensual."
+              - label: "Recámaras"
+                name: "recamaras"
+                widget: "number"
+                value_type: "int"
+                required: false
+              - label: "Baños"
+                name: "banos"
+                widget: "number"
+                value_type: "float"
+                required: false
+              - label: "Metros de construcción"
+                name: "m2_construccion"
+                widget: "number"
+                value_type: "float"
+                required: false
+              - label: "Metros de terreno"
+                name: "m2_terreno"
+                widget: "number"
+                value_type: "float"
+                required: false
+              - label: "Dirección o referencia"
+                name: "direccion"
+                widget: "string"
+                required: false
+              - label: "Descripción"
+                name: "descripcion"
+                widget: "text"
+              - label: "Fotos"
+                name: "fotos"
+                widget: "list"
+                field: { label: "Foto", name: "foto", widget: "image" }
+              - label: "Destacada en el inicio"
+                name: "destacada"
+                widget: "boolean"
+                default: false
+                hint: "Actívalo para que aparezca en la página principal."
+              - label: "Publicada"
+                name: "publicada"
+                widget: "boolean"
+                default: true
+                hint: "Desactívalo para quitarla del sitio sin borrarla (puedes volver a activarla después)."

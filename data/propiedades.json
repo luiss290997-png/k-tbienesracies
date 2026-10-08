@@ -48,7 +48,7 @@
       "direccion": "Campestre La Rosita, Saltillo, Coahuila",
       "banos": 3,
       "tipo": "casa",
-      "publicada": true,
+      "publicada": false,
       "operacion": "venta",
       "titulo": "Casa en Campestre La Rosita",
       "destacada": true,
@@ -67,7 +67,7 @@
       "direccion": "Las Misiones, Saltillo, Coahuila",
       "banos": 2,
       "tipo": "casa",
-      "publicada": true,
+      "publicada": false,
       "operacion": "renta",
       "titulo": "Casa en renta en Las Misiones",
       "destacada": false,
@@ -86,7 +86,7 @@
       "direccion": "Residencial San Alberto, Saltillo, Coahuila",
       "banos": 2.5,
       "tipo": "casa",
-      "publicada": true,
+      "publicada": false,
       "operacion": "venta",
       "titulo": "Casa en Residencial San Alberto",
       "destacada": false,
@@ -105,7 +105,7 @@
       "direccion": "Los Valdez, Saltillo, Coahuila",
       "banos": 1.5,
       "tipo": "casa",
-      "publicada": true,
+      "publicada": false,
       "operacion": "renta",
       "titulo": "Casa en renta en Los Valdez",
       "destacada": false,
@@ -124,7 +124,7 @@
       "direccion": "Zona Centro, Saltillo, Coahuila",
       "banos": 1,
       "tipo": "departamento",
-      "publicada": true,
+      "publicada": false,
       "operacion": "renta",
       "titulo": "Departamento en renta, zona Centro",
       "destacada": false,
@@ -142,45 +142,13 @@
       "direccion": "Saltillo 2000, Saltillo, Coahuila",
       "banos": 2,
       "tipo": "departamento",
-      "publicada": true,
+      "publicada": false,
       "operacion": "venta",
       "titulo": "Departamento en Saltillo 2000",
       "destacada": true,
       "id": "depto-saltillo-2000",
       "m2_construccion": 88,
       "recamaras": 2
-    },
-    {
-      "precio": 22000,
-      "zona": "Carranza",
-      "descripcion": "Local en planta baja sobre avenida con alto flujo vehicular y peatonal. Ideal para comercio o servicios.",
-      "fotos": [
-        "/images/local-carranza.jpg"
-      ],
-      "direccion": "Av. Venustiano Carranza, Saltillo, Coahuila",
-      "tipo": "local",
-      "publicada": true,
-      "operacion": "renta",
-      "titulo": "Local comercial en renta, Carranza",
-      "destacada": false,
-      "id": "local-carranza",
-      "m2_construccion": 140
-    },
-    {
-      "precio": 980000,
-      "zona": "Zona Elena",
-      "descripcion": "Terreno plano, listo para construir, con servicios disponibles sobre la calle.",
-      "fotos": [
-        "/images/terreno-elena.jpg"
-      ],
-      "direccion": "Zona Elena, Saltillo, Coahuila",
-      "tipo": "terreno",
-      "publicada": true,
-      "operacion": "venta",
-      "titulo": "Terreno en venta, Zona Elena",
-      "destacada": false,
-      "id": "terreno-elena",
-      "m2_terreno": 500
     }
   ]
 }

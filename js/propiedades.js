@@ -25,6 +25,13 @@ function metaLine(p) {
   return parts.join(" · ");
 }
 
+function direccionLine(p) {
+  const parts = [];
+  if (p.direccion) parts.push(p.direccion);
+  if (p.codigo_postal) parts.push(`CP ${p.codigo_postal}`);
+  return parts.join(" · ");
+}
+
 let _promise = null;
 function loadPropiedades() {
   if (_promise) return _promise;
@@ -53,7 +60,7 @@ function matches(p, params) {
   if (params.precio && Number(p.precio) > Number(params.precio)) return false;
   if (params.q) {
     const q = params.q.toLowerCase();
-    const hay = `${p.titulo} ${p.zona} ${p.direccion || ""} ${p.descripcion || ""}`.toLowerCase();
+    const hay = `${p.titulo} ${p.zona} ${p.direccion || ""} ${p.codigo_postal || ""} ${p.descripcion || ""}`.toLowerCase();
     if (!hay.includes(q)) return false;
   }
   return true;
@@ -125,6 +132,7 @@ function ensureModal() {
       <h2 id="prop-modal-title"></h2>
       <p class="prop-zona" id="prop-modal-zona"></p>
       <p class="prop-meta" id="prop-modal-meta"></p>
+      <p class="prop-direccion" id="prop-modal-direccion"></p>
       <p id="prop-modal-desc"></p>
       <button class="btn btn-green" type="button" id="prop-modal-wa">Preguntar por WhatsApp</button>
     </div>
@@ -161,6 +169,10 @@ function renderModalContent(p) {
   document.getElementById("prop-modal-title").textContent = p.titulo;
   document.getElementById("prop-modal-zona").textContent = p.zona;
   document.getElementById("prop-modal-meta").textContent = metaLine(p);
+  const direccionEl = document.getElementById("prop-modal-direccion");
+  const direccionTxt = direccionLine(p);
+  direccionEl.textContent = direccionTxt;
+  direccionEl.style.display = direccionTxt ? "" : "none";
   document.getElementById("prop-modal-desc").textContent = p.descripcion || "";
   const waBtn = document.getElementById("prop-modal-wa");
   waBtn.onclick = () => {

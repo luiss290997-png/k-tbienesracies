@@ -74,6 +74,12 @@ collections:
                 name: "direccion"
                 widget: "string"
                 required: false
+              - label: "Código postal"
+                name: "codigo_postal"
+                widget: "string"
+                required: false
+                pattern: ['^\d{5}$', "Debe ser un código postal de 5 dígitos, ej. 25270"]
+                hint: "Opcional. Los 5 dígitos del CP, ej. 25270."
               - label: "Descripción"
                 name: "descripcion"
                 widget: "text"

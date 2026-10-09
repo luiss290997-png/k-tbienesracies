@@ -34,26 +34,17 @@ collections:
                   - { label: "Departamento", value: "departamento" }
                   - { label: "Terreno", value: "terreno" }
                   - { label: "Local comercial", value: "local" }
+                  - { label: "Nave industrial", value: "nave_industrial" }
               - label: "Operación"
                 name: "operacion"
                 widget: "select"
                 options:
                   - { label: "Venta", value: "venta" }
                   - { label: "Renta", value: "renta" }
-              - label: "Zona"
+              - label: "Colonia o zona"
                 name: "zona"
-                widget: "select"
-                options:
-                  - "Cumbres"
-                  - "Campestre La Rosita"
-                  - "Saltillo 2000"
-                  - "Residencial San Alberto"
-                  - "Los Valdez"
-                  - "Las Misiones"
-                  - "Centro"
-                  - "Carranza"
-                  - "Zona Elena"
-                hint: "Si necesitas una zona que no está en la lista, pide que la agreguen aquí y en el buscador del sitio."
+                widget: "string"
+                hint: "Escribe la colonia o zona como quieras que aparezca (ej. Cumbres, Parque Industrial, etc). El buscador del sitio se actualiza solo con las colonias que vayas usando."
               - label: "Precio"
                 name: "precio"
                 widget: "number"

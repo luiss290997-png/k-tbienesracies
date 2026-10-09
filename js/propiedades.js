@@ -1,7 +1,7 @@
 // Carga, filtra y muestra las propiedades guardadas en /data/propiedades.json
 // (ese archivo lo edita el panel /admin). No requiere servidor ni backend.
 
-const TIPO_LABEL = { casa: "Casa", departamento: "Departamento", terreno: "Terreno", local: "Local comercial" };
+const TIPO_LABEL = { casa: "Casa", departamento: "Departamento", terreno: "Terreno", local: "Local comercial", nave_industrial: "Nave industrial" };
 const OPERACION_LABEL = { venta: "Venta", renta: "Renta" };
 
 function esc(str) {
@@ -25,17 +25,14 @@ function metaLine(p) {
   return parts.join(" · ");
 }
 
-let _cache = null;
-async function loadPropiedades() {
-  if (_cache) return _cache;
-  try {
-    const res = await fetch("/data/propiedades.json", { cache: "no-store" });
-    const json = await res.json();
-    _cache = Array.isArray(json.propiedades) ? json.propiedades : [];
-  } catch (e) {
-    _cache = [];
-  }
-  return _cache;
+let _promise = null;
+function loadPropiedades() {
+  if (_promise) return _promise;
+  _promise = fetch("/data/propiedades.json", { cache: "no-store" })
+    .then((res) => res.json())
+    .then((json) => (Array.isArray(json.propiedades) ? json.propiedades : []))
+    .catch(() => []);
+  return _promise;
 }
 
 function getParams() {
@@ -91,6 +88,24 @@ function syncFilterForm(params) {
   if (params.operacion && form.operacion) form.operacion.value = params.operacion;
   if (params.zona && form.zona) form.zona.value = params.zona;
   if (params.precio && form.precio) form.precio.value = params.precio;
+}
+
+// Llena el selector de "Zona" con las colonias que realmente existen en las
+// propiedades publicadas, para que una colonia nueva capturada en /admin
+// aparezca sola en el buscador sin tocar código.
+async function initZonaFilter() {
+  const selects = document.querySelectorAll('[data-filter] select[name="zona"]');
+  if (!selects.length) return;
+  const data = await loadPropiedades();
+  const zonas = [...new Set(data.filter((p) => p.publicada).map((p) => p.zona).filter(Boolean))]
+    .sort((a, b) => a.localeCompare(b, "es"));
+  const params = getParams();
+  selects.forEach((select) => {
+    const actual = params.zona || select.value;
+    select.innerHTML = `<option value="todas">Todas las zonas</option>` +
+      zonas.map((z) => `<option value="${esc(z)}">${esc(z)}</option>`).join("");
+    if (actual && zonas.includes(actual)) select.value = actual;
+  });
 }
 
 // --- Modal de detalle ---
@@ -231,6 +246,7 @@ async function initDestacadas() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initZonaFilter();
   initListado();
   initDestacadas();
 });

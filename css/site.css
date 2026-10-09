@@ -149,6 +149,7 @@ footer.site .muted { color: rgba(255,252,247,.65); font-size: 14px; line-height:
 .prop-card-body h3 { margin: 0; font-size: 1.05rem; }
 .prop-zona { color: var(--green-2); font-size: 13px; margin: 0; }
 .prop-meta { color: var(--muted); font-size: 13px; margin: 0 0 .5rem; }
+.prop-direccion { color: var(--muted); font-size: 13px; margin: 0 0 1rem; }
 .prop-card-body .btn { margin-top: auto; align-self: flex-start; }
 
 .prop-modal-box { max-width: 720px; padding: 0; }

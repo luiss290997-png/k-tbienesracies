@@ -7,12 +7,12 @@
       "fotos": [
         "/images/propiedades/reacamarachica-depa-2-reacamaras.jpg",
         "/images/propiedades/whatsapp-image-2026-10-09-at-6.04.51-pm.jpeg",
-        "/images/propiedades/baño1-depa-2-recamaras-.jpg",
-        "/images/propiedades/baño2-depa-2-recamaras.jpg"
+        "/images/propiedades/baño2-depa-2-recamaras.jpg",
+        "/images/propiedades/baño1-depa-2-recamaras-.jpg"
       ],
       "direccion": " Saltillo, Coahuila",
       "codigo_postal": "25270",
-      "banos": 2,
+      "banos": 1,
       "tipo": "departamento",
       "publicada": true,
       "operacion": "venta",

@@ -2,22 +2,26 @@
   "propiedades": [
     {
       "precio": 6900000,
-      "zona": "Cumbres",
-      "descripcion": "Residencia de dos niveles con acabados de lujo, jardín amplio, cocina integral y cochera para 3 autos. Ubicada en una de las zonas más exclusivas de Saltillo.",
+      "zona": "Sin nombre de colonia 16",
+      "descripcion": "Departamento en Torre VITA (Voel Alto Distrito) — Saltillo\nExclusivo departamento vertical con ubicación privilegiada. Diseñado con acabados modernos, excelente iluminación natural y vistas panorámicas.\n\nAmenidades del desarrollo: Alberca, gimnasio, zona de yoga, ludoteca, pet park, áreas verdes, zona cowork, seguridad y mas...\n\n    Ideal para: Vivir con estilo o inversión de alta plusvalía inmediata. ",
       "fotos": [
-        "/images/hero-villa.jpg"
+        "/images/propiedades/reacamarachica-depa-2-reacamaras.jpg",
+        "/images/propiedades/whatsapp-image-2026-10-09-at-6.04.51-pm.jpeg",
+        "/images/propiedades/baño1-depa-2-recamaras-.jpg",
+        "/images/propiedades/baño2-depa-2-recamaras.jpg"
       ],
-      "direccion": "Cumbres, Saltillo, Coahuila",
-      "banos": 3.5,
-      "tipo": "casa",
-      "publicada": false,
+      "direccion": " Saltillo, Coahuila",
+      "codigo_postal": "25270",
+      "banos": 2,
+      "tipo": "departamento",
+      "publicada": true,
       "operacion": "venta",
-      "titulo": "Villa residencial en Cumbres",
-      "destacada": false,
+      "titulo": "Departamento en Torre Vita ",
+      "destacada": true,
       "id": "villa-cumbres",
-      "m2_terreno": 450,
-      "m2_construccion": 320,
-      "recamaras": 4
+      "m2_terreno": "",
+      "m2_construccion": "",
+      "recamaras": 2
     },
     {
       "precio": 3450000,

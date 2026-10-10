@@ -1,7 +1,7 @@
 {
   "propiedades": [
     {
-      "precio": 6900000,
+      "precio": "",
       "zona": "Sin nombre de colonia 16",
       "descripcion": "Departamento en Torre VITA (Voel Alto Distrito) — Saltillo\nExclusivo departamento vertical con ubicación privilegiada. Diseñado con acabados modernos, excelente iluminación natural y vistas panorámicas.\n\nAmenidades del desarrollo: Alberca, gimnasio, zona de yoga, ludoteca, pet park, áreas verdes, zona cowork, seguridad y mas...\n\n    Ideal para: Vivir con estilo o inversión de alta plusvalía inmediata. ",
       "fotos": [
@@ -16,7 +16,7 @@
       "tipo": "departamento",
       "publicada": true,
       "operacion": "venta",
-      "titulo": "Departamento en Torre Vita ",
+      "titulo": "Departamento de 2 recamaras en Torre Vita ",
       "destacada": true,
       "id": "villa-cumbres",
       "m2_terreno": "",
@@ -24,22 +24,26 @@
       "recamaras": 2
     },
     {
-      "precio": 3450000,
-      "zona": "Cumbres",
-      "descripcion": "Casa en privada con vigilancia, sala de estar, cocina equipada y patio trasero techado. Ideal para familia.",
+      "precio": "",
+      "zona": "Col. Sin nombre",
+      "descripcion": "Departamento en Torre VITA (Voel Alto Distrito) — Saltillo\nExclusivo departamento vertical con ubicación privilegiada. Diseñado con acabados modernos, excelente iluminación natural y vistas panorámicas.\n\nAmenidades del desarrollo: Alberca, gimnasio, zona de yoga, ludoteca, pet park, áreas verdes, zona cowork, seguridad y mas...\n\n    Ideal para: Vivir con estilo o inversión de alta plusvalía inmediata. ",
       "fotos": [
-        "/images/casa-cumbres.jpg"
+        "/images/propiedades/dep1.jpg",
+        "/images/propiedades/dep2.jpg",
+        "/images/propiedades/dep5.jpg",
+        "/images/propiedades/dep6.jpg"
       ],
-      "direccion": "Privada en Cumbres, Saltillo, Coahuila",
+      "direccion": "Saltillo, Coahuila",
+      "codigo_postal": "25270",
       "banos": 2.5,
-      "tipo": "casa",
-      "publicada": false,
+      "tipo": "departamento",
+      "publicada": true,
       "operacion": "venta",
-      "titulo": "Casa en privada, Cumbres",
-      "destacada": false,
+      "titulo": "Deapartamento de 3 recamaras en Torre Vita",
+      "destacada": true,
       "id": "casa-cumbres",
-      "m2_terreno": 220,
-      "m2_construccion": 180,
+      "m2_terreno": "",
+      "m2_construccion": "",
       "recamaras": 3
     },
     {

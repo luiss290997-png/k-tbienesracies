@@ -47,23 +47,26 @@
       "recamaras": 3
     },
     {
-      "precio": 5200000,
-      "zona": "Campestre La Rosita",
-      "descripcion": "Amplia casa de una planta con estudio, jardín con asador y cuarto de servicio. A minutos de zonas comerciales.",
+      "precio": 30000000,
+      "zona": "Col. sin nombre 25",
+      "descripcion": "Distribución y Superficies:\n\n    Oficinas principales: 222.00 m²\n\n    Área de nave industrial: 900.00 m²\n\n    Oficinas en naves industriales: 80.00 m²\n\n    Bodega industrial: 217.00 m²\n\n    Caseta de acceso: 6.00 m²\n\n    Superficie total construida: 1,425.00 m²\n\nVentajas de la Zona:\n\n    Conectividad inmediata para maniobras, logística y distribución.\n\n    Rodeada de un entorno industrial consolidado y de alta plusvalía.",
       "fotos": [
-        "/images/casa-campestre.jpg"
+        "/images/propiedades/ni1.jpg",
+        "/images/propiedades/ni2.jpg",
+        "/images/propiedades/ni3.jpg"
       ],
-      "direccion": "Campestre La Rosita, Saltillo, Coahuila",
-      "banos": 3,
-      "tipo": "casa",
-      "publicada": false,
+      "direccion": " Saltillo, Coahuila",
+      "codigo_postal": "25107",
+      "banos": "",
+      "tipo": "nave_industrial",
+      "publicada": true,
       "operacion": "venta",
-      "titulo": "Casa en Campestre La Rosita",
-      "destacada": false,
+      "titulo": "Nave industrial",
+      "destacada": true,
       "id": "casa-campestre",
-      "m2_terreno": 300,
-      "m2_construccion": 260,
-      "recamaras": 4
+      "m2_terreno": 5000,
+      "m2_construccion": "",
+      "recamaras": ""
     },
     {
       "precio": 18000,

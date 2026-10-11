@@ -1,7 +1,7 @@
 // Carga, filtra y muestra las propiedades guardadas en /data/propiedades.json
 // (ese archivo lo edita el panel /admin). No requiere servidor ni backend.
 
-const TIPO_LABEL = { casa: "Casa", departamento: "Departamento", terreno: "Terreno", local: "Local comercial", nave_industrial: "Nave industrial" };
+const TIPO_LABEL = { casa: "Casa", departamento: "Departamento", terreno: "Terreno", local: "Local comercial", nave_industrial: "Nave industrial", oficina: "Oficina" };
 const OPERACION_LABEL = { venta: "Venta", renta: "Renta" };
 
 function esc(str) {
@@ -10,8 +10,13 @@ function esc(str) {
   }[c]));
 }
 
+function tienePrecio(p) {
+  return p.precio !== undefined && p.precio !== null && p.precio !== "" && Number(p.precio) > 0;
+}
+
 function formatPrecio(p) {
-  const n = Number(p.precio) || 0;
+  if (!tienePrecio(p)) return "Precio a consultar";
+  const n = Number(p.precio);
   const monto = n.toLocaleString("es-MX", { style: "currency", currency: "MXN", maximumFractionDigits: 0 });
   return p.operacion === "renta" ? `${monto} /mes` : monto;
 }
@@ -57,7 +62,10 @@ function matches(p, params) {
   if (params.tipo && params.tipo !== "todos" && p.tipo !== params.tipo) return false;
   if (params.operacion && params.operacion !== "todas" && p.operacion !== params.operacion) return false;
   if (params.zona && params.zona !== "todas" && p.zona !== params.zona) return false;
-  if (params.precio && Number(p.precio) > Number(params.precio)) return false;
+  if (params.precio) {
+    if (!tienePrecio(p)) return false;
+    if (Number(p.precio) > Number(params.precio)) return false;
+  }
   if (params.q) {
     const q = params.q.toLowerCase();
     const hay = `${p.titulo} ${p.zona} ${p.direccion || ""} ${p.codigo_postal || ""} ${p.descripcion || ""}`.toLowerCase();

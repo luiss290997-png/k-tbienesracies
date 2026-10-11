@@ -35,6 +35,7 @@ collections:
                   - { label: "Terreno", value: "terreno" }
                   - { label: "Local comercial", value: "local" }
                   - { label: "Nave industrial", value: "nave_industrial" }
+                  - { label: "Oficina", value: "oficina" }
               - label: "Operación"
                 name: "operacion"
                 widget: "select"
@@ -49,7 +50,8 @@ collections:
                 name: "precio"
                 widget: "number"
                 value_type: "float"
-                hint: "En pesos mexicanos. Si es renta, pon el precio mensual."
+                required: false
+                hint: "En pesos mexicanos. Si es renta, pon el precio mensual. Déjalo vacío si todavía no quieres publicar un precio — el sitio mostrará \"Precio a consultar\"."
               - label: "Recámaras"
                 name: "recamaras"
                 widget: "number"

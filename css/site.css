@@ -189,3 +189,23 @@ footer.site .muted { color: rgba(255,252,247,.65); font-size: 14px; line-height:
 .legal-doc .toc { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0 2.5rem; padding: 1rem 1.2rem; background: var(--cream); border: 1px solid var(--stone); border-radius: 8px; }
 .legal-doc .toc a { color: var(--green-2); font-size: .875rem; }
 .legal-doc .nota { background: var(--cream); border: 1px solid var(--stone); border-radius: 8px; padding: 1rem 1.2rem; font-size: .875rem; color: var(--muted); }
+
+/* Detalles de Halloween (se insertan solos sobre el hero/banner de cada
+   página vía js/site.js — quitar esta temporada es borrar este bloque y
+   la función addHalloweenDecor en site.js, nada más) */
+.hw-decor { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 5; }
+.hw-corner { position: absolute; top: 0; width: 92px; height: 92px; opacity: .55; }
+.hw-corner.tl { left: 0; }
+.hw-corner.tr { right: 0; transform: scaleX(-1); }
+.hw-ghost { position: absolute; width: 46px; height: auto; opacity: .85; animation: hw-float 4.5s ease-in-out infinite; filter: drop-shadow(0 4px 10px rgba(0,0,0,.25)); }
+.hw-ghost.g1 { top: 18%; right: 9%; animation-delay: 0s; }
+.hw-ghost.g2 { top: 42%; left: 7%; width: 34px; animation-delay: 1.4s; }
+.hw-spider { position: absolute; top: 0; right: 14%; width: 26px; animation: hw-dangle 6s ease-in-out infinite; transform-origin: top center; }
+@keyframes hw-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes hw-dangle { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(14px) rotate(3deg); } }
+@media (max-width: 480px) {
+  .hw-corner { width: 64px; height: 64px; }
+  .hw-ghost { width: 34px; }
+  .hw-ghost.g2 { width: 26px; }
+  .hw-spider { width: 20px; }
+}

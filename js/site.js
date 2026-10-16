@@ -97,4 +97,52 @@ document.addEventListener("DOMContentLoaded", () => {
       slides[i].classList.add("on");
     }, 7000);
   }
+
+  addHalloweenDecor();
 });
+
+// Detalles de temporada (telarañas, fantasmita, araña) sobre el hero/banner
+// de cada página. Para quitarlos: borrar esta función, la línea que la
+// llama arriba, y el bloque "Detalles de Halloween" en css/site.css.
+function addHalloweenDecor() {
+  const host = qs(".hero, .banner");
+  if (!host) return;
+  host.insertAdjacentHTML("beforeend", `
+    <div class="hw-decor" aria-hidden="true">
+      <svg class="hw-corner tl" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0 L100 0 M0 0 L0 100" stroke="#fffcf7" stroke-width="1.2" opacity=".6"/>
+        <path d="M0 14 Q 40 14 14 40 Q 14 70 0 70" stroke="#fffcf7" stroke-width="1.1"/>
+        <path d="M0 28 Q 28 28 28 56" stroke="#fffcf7" stroke-width="1"/>
+        <path d="M14 0 Q 14 40 40 14 Q 70 14 70 0" stroke="#fffcf7" stroke-width="1.1"/>
+        <path d="M28 0 Q 28 28 56 28" stroke="#fffcf7" stroke-width="1"/>
+        <path d="M0 0 L22 22 M0 0 L38 7 M0 0 L7 38" stroke="#fffcf7" stroke-width=".8" opacity=".8"/>
+      </svg>
+      <svg class="hw-corner tr" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0 L100 0 M0 0 L0 100" stroke="#fffcf7" stroke-width="1.2" opacity=".6"/>
+        <path d="M0 14 Q 40 14 14 40 Q 14 70 0 70" stroke="#fffcf7" stroke-width="1.1"/>
+        <path d="M0 28 Q 28 28 28 56" stroke="#fffcf7" stroke-width="1"/>
+        <path d="M14 0 Q 14 40 40 14 Q 70 14 70 0" stroke="#fffcf7" stroke-width="1.1"/>
+        <path d="M28 0 Q 28 28 56 28" stroke="#fffcf7" stroke-width="1"/>
+        <path d="M0 0 L22 22 M0 0 L38 7 M0 0 L7 38" stroke="#fffcf7" stroke-width=".8" opacity=".8"/>
+      </svg>
+      <svg class="hw-spider" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="12" y1="0" x2="12" y2="18" stroke="#fffcf7" stroke-width="1" opacity=".7"/>
+        <circle cx="12" cy="24" r="5" fill="#1b2420"/>
+        <circle cx="12" cy="18" r="3" fill="#1b2420"/>
+        <g stroke="#1b2420" stroke-width="1.1" stroke-linecap="round">
+          <path d="M7 21 L2 18 M7 23 L1 23 M7 26 L2 29 M17 21 L22 18 M17 23 L23 23 M17 26 L22 29"/>
+        </g>
+      </svg>
+      <svg class="hw-ghost g1" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 2C10 2 3 10 3 20v20l5-4 5 4 7-4 7 4 5-4 5 4V20C32 10 30 2 20 2Z" fill="#fffcf7"/>
+        <circle cx="14" cy="20" r="2.4" fill="#1b2420"/>
+        <circle cx="26" cy="20" r="2.4" fill="#1b2420"/>
+      </svg>
+      <svg class="hw-ghost g2" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 2C10 2 3 10 3 20v20l5-4 5 4 7-4 7 4 5-4 5 4V20C32 10 30 2 20 2Z" fill="#fffcf7"/>
+        <circle cx="14" cy="20" r="2.4" fill="#1b2420"/>
+        <circle cx="26" cy="20" r="2.4" fill="#1b2420"/>
+      </svg>
+    </div>
+  `);
+}

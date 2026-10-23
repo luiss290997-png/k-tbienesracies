@@ -182,22 +182,27 @@
       "recamaras": 3
     },
     {
-      "precio": 9500,
-      "zona": "Centro",
-      "descripcion": "Departamento amueblado, a pasos del centro histórico. Incluye un cajón de estacionamiento.",
+      "precio": "",
+      "zona": "Arteaga",
+      "descripcion": "🌳 ¡Excelente oportunidad de inversión en Arteaga! Terreno campestre de 3,029 m²\nIdeal para tu proyecto de descanso, cabaña o quinta, a solo 4.5 km de la Alameda de Arteaga.\n Superficie: 3,029 m²\n Precio: $500 MXN por m²\n Servicios: Cuenta con red de luz cercana; agua por pipa/pozo.\n🌳 ¡Excelente oportunidad de inversión en Arteaga! Terreno campestre de 3,029 m²\nIdeal para tu proyecto de descanso, cabaña o quinta, a solo 4.5 km de la Alameda de Arteaga.\n Superficie: 3,029 m²\n Precio: $500 MXN por m²\n Servicios: Cuenta con red de luz cercana; agua por pipa/pozo.\n Documentación: Título de propiedad en regla, predial al corriente. ¡Todo listo para tramitar tus escrituras sin problemas!",
       "fotos": [
-        "/images/depto-distrito.jpg"
+        "/images/propiedades/terrenoarteaga4.jpg",
+        "/images/propiedades/terrenoarteaga5.jpg",
+        "/images/propiedades/terrenoarteaga6.jpg",
+        "/images/propiedades/terrenoarteaga3.jpg",
+        "/images/propiedades/terrenoarteaga2.jpg",
+        "/images/propiedades/terrenoarteaga1.jpg"
       ],
-      "direccion": "Zona Centro, Saltillo, Coahuila",
-      "banos": 1,
-      "tipo": "departamento",
-      "publicada": false,
-      "operacion": "renta",
-      "titulo": "Departamento en renta, zona Centro",
-      "destacada": false,
+      "direccion": "Arteaga, Coahuila ",
+      "banos": "",
+      "tipo": "terreno",
+      "publicada": true,
+      "operacion": "venta",
+      "titulo": "Terreno campestre en arteaga ",
+      "destacada": true,
       "id": "depto-centro",
-      "m2_construccion": 75,
-      "recamaras": 2
+      "m2_construccion": "",
+      "recamaras": ""
     },
     {
       "precio": 1850000,

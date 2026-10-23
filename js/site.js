@@ -110,20 +110,24 @@ function addHalloweenDecor() {
   host.insertAdjacentHTML("beforeend", `
     <div class="hw-decor" aria-hidden="true">
       <svg class="hw-corner tl" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0 L100 0 M0 0 L0 100" stroke="#fffcf7" stroke-width="1.2" opacity=".6"/>
-        <path d="M0 14 Q 40 14 14 40 Q 14 70 0 70" stroke="#fffcf7" stroke-width="1.1"/>
-        <path d="M0 28 Q 28 28 28 56" stroke="#fffcf7" stroke-width="1"/>
-        <path d="M14 0 Q 14 40 40 14 Q 70 14 70 0" stroke="#fffcf7" stroke-width="1.1"/>
-        <path d="M28 0 Q 28 28 56 28" stroke="#fffcf7" stroke-width="1"/>
-        <path d="M0 0 L22 22 M0 0 L38 7 M0 0 L7 38" stroke="#fffcf7" stroke-width=".8" opacity=".8"/>
+        <g stroke="#fffcf7" stroke-width=".9" stroke-linecap="round">
+          <path d="M0 0 L86 0 M0 0 L80.8 29.4 M0 0 L65.9 55.3 M0 0 L43 74.5 M0 0 L14.9 84.7 M0 0 L0 86" opacity=".85"/>
+          <path d="M15 0 Q16.9 3 14.1 5.1 Q14.8 8.6 11.5 9.6 Q11 13.1 7.5 13 Q5.9 16.1 2.6 14.8 Q1.5 17.3 0 15" opacity=".5"/>
+          <path d="M30 0 Q33.5 5.9 28.2 10.3 Q29.4 17 23 19.3 Q21.8 26 15 26 Q11.6 31.9 5.2 29.5 Q3 34.2 0 30" opacity=".58"/>
+          <path d="M47 0 Q52 9.2 44.2 16.1 Q45.7 26.4 36 30.2 Q33.9 40.4 23.5 40.7 Q18 49.6 8.2 46.3 Q4.7 53.2 0 47" opacity=".66"/>
+          <path d="M65 0 Q71.2 12.6 61.1 22.2 Q62.6 36.2 49.8 41.8 Q46.5 55.4 32.5 56.3 Q24.7 68 11.3 64 Q6.4 72.9 0 65" opacity=".74"/>
+          <path d="M83 0 Q90.2 15.9 78 28.4 Q79.3 45.8 63.6 53.4 Q58.8 70.1 41.5 71.9 Q31.3 86 14.4 81.7 Q8.1 92.3 0 83" opacity=".85"/>
+        </g>
       </svg>
       <svg class="hw-corner tr" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0 L100 0 M0 0 L0 100" stroke="#fffcf7" stroke-width="1.2" opacity=".6"/>
-        <path d="M0 14 Q 40 14 14 40 Q 14 70 0 70" stroke="#fffcf7" stroke-width="1.1"/>
-        <path d="M0 28 Q 28 28 28 56" stroke="#fffcf7" stroke-width="1"/>
-        <path d="M14 0 Q 14 40 40 14 Q 70 14 70 0" stroke="#fffcf7" stroke-width="1.1"/>
-        <path d="M28 0 Q 28 28 56 28" stroke="#fffcf7" stroke-width="1"/>
-        <path d="M0 0 L22 22 M0 0 L38 7 M0 0 L7 38" stroke="#fffcf7" stroke-width=".8" opacity=".8"/>
+        <g stroke="#fffcf7" stroke-width=".9" stroke-linecap="round">
+          <path d="M0 0 L86 0 M0 0 L80.8 29.4 M0 0 L65.9 55.3 M0 0 L43 74.5 M0 0 L14.9 84.7 M0 0 L0 86" opacity=".85"/>
+          <path d="M15 0 Q16.9 3 14.1 5.1 Q14.8 8.6 11.5 9.6 Q11 13.1 7.5 13 Q5.9 16.1 2.6 14.8 Q1.5 17.3 0 15" opacity=".5"/>
+          <path d="M30 0 Q33.5 5.9 28.2 10.3 Q29.4 17 23 19.3 Q21.8 26 15 26 Q11.6 31.9 5.2 29.5 Q3 34.2 0 30" opacity=".58"/>
+          <path d="M47 0 Q52 9.2 44.2 16.1 Q45.7 26.4 36 30.2 Q33.9 40.4 23.5 40.7 Q18 49.6 8.2 46.3 Q4.7 53.2 0 47" opacity=".66"/>
+          <path d="M65 0 Q71.2 12.6 61.1 22.2 Q62.6 36.2 49.8 41.8 Q46.5 55.4 32.5 56.3 Q24.7 68 11.3 64 Q6.4 72.9 0 65" opacity=".74"/>
+          <path d="M83 0 Q90.2 15.9 78 28.4 Q79.3 45.8 63.6 53.4 Q58.8 70.1 41.5 71.9 Q31.3 86 14.4 81.7 Q8.1 92.3 0 83" opacity=".85"/>
+        </g>
       </svg>
       <svg class="hw-spider" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <line x1="12" y1="0" x2="12" y2="18" stroke="#fffcf7" stroke-width="1" opacity=".7"/>

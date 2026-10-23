@@ -10,8 +10,10 @@
 <body>
   <!-- Permite iniciar sesión con Netlify Identity -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <!-- El panel de edición (Decap CMS) -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- El panel de edición (Decap CMS). Se usa una versión fija (en vez de
+       "^3.0.0") para que el navegador no cargue de golpe una versión nueva
+       sin avisar; si algún día hay que actualizar, se cambia aquí a mano. -->
+  <script src="https://unpkg.com/decap-cms@3.16.3/dist/decap-cms.js"></script>
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", (user) => {
@@ -21,6 +23,62 @@
           });
         }
       });
+    }
+  </script>
+  <!-- Vista previa de "Propiedades" con las fotos ya mostradas como
+       imágenes, para que siempre se vea una vista previa aunque la
+       miniatura del propio campo "Fotos" tarde en aparecer. -->
+  <script>
+    if (window.CMS && window.createClass && window.h) {
+      var PropiedadesPreview = createClass({
+        render: function () {
+          var entry = this.props.entry;
+          var getAsset = this.props.getAsset;
+          var propiedades = entry.getIn(["data", "propiedades"]) || [];
+          return h(
+            "div",
+            { style: { fontFamily: "sans-serif", padding: "16px" } },
+            propiedades
+              .map(function (prop, i) {
+                var fotos = prop.get("fotos") || [];
+                return h(
+                  "div",
+                  { key: i, style: { marginBottom: "28px" } },
+                  h("h2", { style: { marginBottom: "4px" } }, prop.get("titulo") || "(sin título)"),
+                  h(
+                    "p",
+                    { style: { color: "#666", marginTop: 0 } },
+                    [prop.get("zona"), prop.get("tipo"), prop.get("operacion")].filter(Boolean).join(" · ")
+                  ),
+                  h(
+                    "div",
+                    { style: { display: "flex", flexWrap: "wrap", gap: "8px" } },
+                    fotos
+                      .map(function (foto, j) {
+                        var path = foto.get("foto");
+                        if (!path) return null;
+                        var asset = getAsset(path);
+                        return h("img", {
+                          key: j,
+                          src: asset ? asset.toString() : "",
+                          style: {
+                            width: "110px",
+                            height: "110px",
+                            objectFit: "cover",
+                            borderRadius: "6px",
+                            border: "1px solid #ddd",
+                          },
+                        });
+                      })
+                      .toArray()
+                  )
+                );
+              })
+              .toArray()
+          );
+        },
+      });
+      CMS.registerPreviewTemplate("listado", PropiedadesPreview);
     }
   </script>
 </body>

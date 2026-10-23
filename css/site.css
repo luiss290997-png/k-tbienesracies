@@ -194,7 +194,7 @@ footer.site .muted { color: rgba(255,252,247,.65); font-size: 14px; line-height:
    página vía js/site.js — quitar esta temporada es borrar este bloque y
    la función addHalloweenDecor en site.js, nada más) */
 .hw-decor { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 5; }
-.hw-corner { position: absolute; top: 0; width: 92px; height: 92px; opacity: .55; }
+.hw-corner { position: absolute; top: 0; width: 92px; height: 92px; opacity: .85; }
 .hw-corner.tl { left: 0; }
 .hw-corner.tr { right: 0; transform: scaleX(-1); }
 .hw-ghost { position: absolute; width: 46px; height: auto; opacity: .85; animation: hw-float 4.5s ease-in-out infinite; filter: drop-shadow(0 4px 10px rgba(0,0,0,.25)); }

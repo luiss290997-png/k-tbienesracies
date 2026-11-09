@@ -190,22 +190,25 @@ footer.site .muted { color: rgba(255,252,247,.65); font-size: 14px; line-height:
 .legal-doc .toc a { color: var(--green-2); font-size: .875rem; }
 .legal-doc .nota { background: var(--cream); border: 1px solid var(--stone); border-radius: 8px; padding: 1rem 1.2rem; font-size: .875rem; color: var(--muted); }
 
-/* Detalles de Halloween (se insertan solos sobre el hero/banner de cada
+/* Detalles de Navidad (se insertan solos sobre el hero/banner de cada
    página vía js/site.js — quitar esta temporada es borrar este bloque y
-   la función addHalloweenDecor en site.js, nada más) */
-.hw-decor { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 5; }
-.hw-corner { position: absolute; top: 0; width: 92px; height: 92px; opacity: .85; }
-.hw-corner.tl { left: 0; }
-.hw-corner.tr { right: 0; transform: scaleX(-1); }
-.hw-ghost { position: absolute; width: 46px; height: auto; opacity: .85; animation: hw-float 4.5s ease-in-out infinite; filter: drop-shadow(0 4px 10px rgba(0,0,0,.25)); }
-.hw-ghost.g1 { top: 18%; right: 9%; animation-delay: 0s; }
-.hw-ghost.g2 { top: 42%; left: 7%; width: 34px; animation-delay: 1.4s; }
-.hw-spider { position: absolute; top: 0; right: 14%; width: 26px; animation: hw-dangle 6s ease-in-out infinite; transform-origin: top center; }
-@keyframes hw-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-@keyframes hw-dangle { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(14px) rotate(3deg); } }
+   la función addNavidadDecor en site.js, nada más) */
+.xmas-decor { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 5; }
+.xmas-corner { position: absolute; top: 0; width: 92px; height: 92px; filter: drop-shadow(0 2px 4px rgba(0,0,0,.35)); }
+.xmas-corner.tl { left: 0; }
+.xmas-corner.tr { right: 0; transform: scaleX(-1); }
+.xmas-snow { position: absolute; width: 46px; height: auto; opacity: .9; animation: xmas-float 4.5s ease-in-out infinite; filter: drop-shadow(0 1px 2px rgba(0,0,0,.4)); }
+.xmas-snow.s1 { top: 18%; right: 9%; animation-delay: 0s; }
+.xmas-snow.s2 { top: 58%; right: 22%; width: 34px; animation-delay: 1.4s; }
+.xmas-bauble { position: absolute; top: 0; width: 22px; height: auto; animation: xmas-dangle 6s ease-in-out infinite; transform-origin: top center; filter: drop-shadow(0 3px 5px rgba(0,0,0,.3)); }
+.xmas-bauble.b1 { right: 14%; }
+.xmas-bauble.b2 { left: 40%; width: 18px; animation-duration: 7s; animation-delay: 1s; }
+@keyframes xmas-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-10px) rotate(8deg); } }
+@keyframes xmas-dangle { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(6px) rotate(4deg); } }
 @media (max-width: 480px) {
-  .hw-corner { width: 64px; height: 64px; }
-  .hw-ghost { width: 34px; }
-  .hw-ghost.g2 { width: 26px; }
-  .hw-spider { width: 20px; }
+  .xmas-corner { width: 64px; height: 64px; }
+  .xmas-snow { width: 34px; }
+  .xmas-snow.s2 { width: 26px; }
+  .xmas-bauble.b1 { width: 16px; }
+  .xmas-bauble.b2 { width: 14px; }
 }

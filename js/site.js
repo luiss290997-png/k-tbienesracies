@@ -98,54 +98,58 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 7000);
   }
 
-  addHalloweenDecor();
+  addNavidadDecor();
 });
 
-// Detalles de temporada (telarañas, fantasmita, araña) sobre el hero/banner
-// de cada página. Para quitarlos: borrar esta función, la línea que la
-// llama arriba, y el bloque "Detalles de Halloween" en css/site.css.
-function addHalloweenDecor() {
+// Detalles de temporada (muérdago/acebo, esferas, copos de nieve) sobre el
+// hero/banner de cada página. Para quitarlos: borrar esta función, la línea
+// que la llama arriba, y el bloque "Detalles de Navidad" en css/site.css.
+function addNavidadDecor() {
   const host = qs(".hero, .banner");
   if (!host) return;
   host.insertAdjacentHTML("beforeend", `
-    <div class="hw-decor" aria-hidden="true">
-      <svg class="hw-corner tl" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="#fffcf7" stroke-width=".9" stroke-linecap="round">
-          <path d="M0 0 L86 0 M0 0 L80.8 29.4 M0 0 L65.9 55.3 M0 0 L43 74.5 M0 0 L14.9 84.7 M0 0 L0 86" opacity=".85"/>
-          <path d="M15 0 Q16.9 3 14.1 5.1 Q14.8 8.6 11.5 9.6 Q11 13.1 7.5 13 Q5.9 16.1 2.6 14.8 Q1.5 17.3 0 15" opacity=".5"/>
-          <path d="M30 0 Q33.5 5.9 28.2 10.3 Q29.4 17 23 19.3 Q21.8 26 15 26 Q11.6 31.9 5.2 29.5 Q3 34.2 0 30" opacity=".58"/>
-          <path d="M47 0 Q52 9.2 44.2 16.1 Q45.7 26.4 36 30.2 Q33.9 40.4 23.5 40.7 Q18 49.6 8.2 46.3 Q4.7 53.2 0 47" opacity=".66"/>
-          <path d="M65 0 Q71.2 12.6 61.1 22.2 Q62.6 36.2 49.8 41.8 Q46.5 55.4 32.5 56.3 Q24.7 68 11.3 64 Q6.4 72.9 0 65" opacity=".74"/>
-          <path d="M83 0 Q90.2 15.9 78 28.4 Q79.3 45.8 63.6 53.4 Q58.8 70.1 41.5 71.9 Q31.3 86 14.4 81.7 Q8.1 92.3 0 83" opacity=".85"/>
+    <div class="xmas-decor" aria-hidden="true">
+      <svg class="xmas-corner tl" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.0 50.0 Q15.9 28.8 6.0 10.0 Q4.1 31.2 14.0 50.0 Z" fill="#2f6e4a" stroke="#1f4a32" stroke-width=".6"/>
+        <path d="M14.0 50.0 Q27.2 30.0 28.0 6.0 Q14.8 26.0 14.0 50.0 Z" fill="#3a8259" stroke="#1f4a32" stroke-width=".6"/>
+        <circle cx="14" cy="46" r="3.2" fill="#c23b3b"/>
+        <circle cx="19" cy="49" r="3" fill="#c23b3b"/>
+        <circle cx="10" cy="50" r="2.8" fill="#c23b3b"/>
+        <circle cx="13" cy="45" r=".9" fill="#fff" opacity=".6"/>
+      </svg>
+      <svg class="xmas-corner tr" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.0 50.0 Q15.9 28.8 6.0 10.0 Q4.1 31.2 14.0 50.0 Z" fill="#2f6e4a" stroke="#1f4a32" stroke-width=".6"/>
+        <path d="M14.0 50.0 Q27.2 30.0 28.0 6.0 Q14.8 26.0 14.0 50.0 Z" fill="#3a8259" stroke="#1f4a32" stroke-width=".6"/>
+        <circle cx="14" cy="46" r="3.2" fill="#c23b3b"/>
+        <circle cx="19" cy="49" r="3" fill="#c23b3b"/>
+        <circle cx="10" cy="50" r="2.8" fill="#c23b3b"/>
+        <circle cx="13" cy="45" r=".9" fill="#fff" opacity=".6"/>
+      </svg>
+      <svg class="xmas-bauble b1" viewBox="0 0 24 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="12" y1="0" x2="12" y2="13" stroke="#d8c9a3" stroke-width="1"/>
+        <rect x="9.5" y="10" width="5" height="4" rx="1" fill="#d8b23a"/>
+        <circle cx="12" cy="27" r="11" fill="#c23b3b"/>
+        <ellipse cx="8.5" cy="22" rx="3" ry="4" fill="#fff" opacity=".35"/>
+      </svg>
+      <svg class="xmas-bauble b2" viewBox="0 0 24 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="12" y1="0" x2="12" y2="13" stroke="#d8c9a3" stroke-width="1"/>
+        <rect x="9.5" y="10" width="5" height="4" rx="1" fill="#c23b3b"/>
+        <circle cx="12" cy="27" r="11" fill="#d8b23a"/>
+        <ellipse cx="8.5" cy="22" rx="3" ry="4" fill="#fff" opacity=".35"/>
+      </svg>
+      <svg class="xmas-snow s1" viewBox="-16 -16 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#fffcf7" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M-14 0 L14 0 M-7 -12.1 L7 12.1 M7 -12.1 L-7 12.1"/>
+          <path d="M9.2 3 L11.2 0 L9.2 -3 M-9.2 3 L-11.2 0 L-9.2 -3 M2 9.5 L5.6 9.7 L7.2 6.5 M-7.2 -6.5 L-5.6 -9.7 L-2 -9.5 M-7.2 6.5 L-5.6 9.7 L-2 9.5 M2 -9.5 L5.6 -9.7 L7.2 -6.5"/>
         </g>
+        <circle cx="0" cy="0" r="1.3" fill="#fffcf7"/>
       </svg>
-      <svg class="hw-corner tr" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="#fffcf7" stroke-width=".9" stroke-linecap="round">
-          <path d="M0 0 L86 0 M0 0 L80.8 29.4 M0 0 L65.9 55.3 M0 0 L43 74.5 M0 0 L14.9 84.7 M0 0 L0 86" opacity=".85"/>
-          <path d="M15 0 Q16.9 3 14.1 5.1 Q14.8 8.6 11.5 9.6 Q11 13.1 7.5 13 Q5.9 16.1 2.6 14.8 Q1.5 17.3 0 15" opacity=".5"/>
-          <path d="M30 0 Q33.5 5.9 28.2 10.3 Q29.4 17 23 19.3 Q21.8 26 15 26 Q11.6 31.9 5.2 29.5 Q3 34.2 0 30" opacity=".58"/>
-          <path d="M47 0 Q52 9.2 44.2 16.1 Q45.7 26.4 36 30.2 Q33.9 40.4 23.5 40.7 Q18 49.6 8.2 46.3 Q4.7 53.2 0 47" opacity=".66"/>
-          <path d="M65 0 Q71.2 12.6 61.1 22.2 Q62.6 36.2 49.8 41.8 Q46.5 55.4 32.5 56.3 Q24.7 68 11.3 64 Q6.4 72.9 0 65" opacity=".74"/>
-          <path d="M83 0 Q90.2 15.9 78 28.4 Q79.3 45.8 63.6 53.4 Q58.8 70.1 41.5 71.9 Q31.3 86 14.4 81.7 Q8.1 92.3 0 83" opacity=".85"/>
+      <svg class="xmas-snow s2" viewBox="-16 -16 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#fffcf7" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M-14 0 L14 0 M-7 -12.1 L7 12.1 M7 -12.1 L-7 12.1"/>
+          <path d="M9.2 3 L11.2 0 L9.2 -3 M-9.2 3 L-11.2 0 L-9.2 -3 M2 9.5 L5.6 9.7 L7.2 6.5 M-7.2 -6.5 L-5.6 -9.7 L-2 -9.5 M-7.2 6.5 L-5.6 9.7 L-2 9.5 M2 -9.5 L5.6 -9.7 L7.2 -6.5"/>
         </g>
-      </svg>
-      <svg class="hw-spider" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="12" y1="0" x2="12" y2="18" stroke="#fffcf7" stroke-width="1" opacity=".7"/>
-        <circle cx="12" cy="24" r="5" fill="#1b2420"/>
-        <circle cx="12" cy="18" r="3" fill="#1b2420"/>
-        <g stroke="#1b2420" stroke-width="1.1" stroke-linecap="round">
-          <path d="M7 21 L2 18 M7 23 L1 23 M7 26 L2 29 M17 21 L22 18 M17 23 L23 23 M17 26 L22 29"/>
-        </g>
-      </svg>
-      <svg class="hw-ghost g1" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 2C10 2 3 10 3 20v20l5-4 5 4 7-4 7 4 5-4 5 4V20C32 10 30 2 20 2Z" fill="#fffcf7"/>
-        <circle cx="14" cy="20" r="2.4" fill="#1b2420"/>
-        <circle cx="26" cy="20" r="2.4" fill="#1b2420"/>
-      </svg>
-      <svg class="hw-ghost g2" viewBox="0 0 40 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20 2C10 2 3 10 3 20v20l5-4 5 4 7-4 7 4 5-4 5 4V20C32 10 30 2 20 2Z" fill="#fffcf7"/>
-        <circle cx="14" cy="20" r="2.4" fill="#1b2420"/>
-        <circle cx="26" cy="20" r="2.4" fill="#1b2420"/>
+        <circle cx="0" cy="0" r="1.3" fill="#fffcf7"/>
       </svg>
     </div>
   `);
